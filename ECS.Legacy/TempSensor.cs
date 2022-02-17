@@ -4,11 +4,11 @@ namespace ECS.Legacy
 {
     internal class TempSensor
     {
-        private Random gen = new Random();
+        private ISystemRandom gen = new SystemRandom();
 
         public int GetTemp()
         {
-            return gen.Next(-5, 45);
+            return gen.Get();
         }
 
         public bool RunSelfTest()
