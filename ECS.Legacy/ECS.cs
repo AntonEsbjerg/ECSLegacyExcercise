@@ -7,11 +7,13 @@ namespace ECS.Legacy
         private int _threshold;
         private readonly ITempSensor _tempSensor;
         private readonly IHeater _heater;
+        private ISystemRandom random { get; set; }
 
         public ECS(int thr)
         {
+            random = new SystemRandom();
             SetThreshold(thr);
-            _tempSensor = new TempSensor();
+            _tempSensor = new TempSensor(random);
             _heater = new Heater();
         }
 

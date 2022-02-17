@@ -4,9 +4,10 @@ using System.Text;
 
 namespace ECS.Legacy
 {
-    interface ITempSensor
-    {
+     public interface ITempSensor
+     {
         public int GetTemp();
+        public int GetTemp(int seed);
         public bool RunSelfTest();
-    }
+     }
 }
