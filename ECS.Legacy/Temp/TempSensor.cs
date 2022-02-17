@@ -4,11 +4,11 @@ namespace ECS.Legacy
 {
     public class TempSensor:ITempSensor
     {
-        private ISystemRandom Gen;
+        private ISystemRandom Gen { get; set; }
 
-        public TempSensor(ISystemRandom gen)
+        public TempSensor()
         {
-            Gen = gen;
+            Gen = new SystemRandom();
         }
         public int GetTemp()
         {

@@ -2,18 +2,17 @@
 
 namespace ECS.Legacy
 {
-    public class ECS
+    public class ECSClass
     {
-        private int _threshold;
-        private readonly ITempSensor _tempSensor;
+        private int _threshold { get; set; }
+        public ITempSensor _tempSensor { get; set; }
         private readonly IHeater _heater;
-        private ISystemRandom random { get; set; }
 
-        public ECS(int thr)
+
+        public ECSClass(int thr)
         {
-            random = new SystemRandom();
-            SetThreshold(thr);
-            _tempSensor = new TempSensor(random);
+            _threshold=thr;
+            _tempSensor = new TempSensor();
             _heater = new Heater();
         }
 
@@ -26,16 +25,6 @@ namespace ECS.Legacy
             else
                 _heater.TurnOff();
 
-        }
-
-        public void SetThreshold(int thr)
-        {
-            _threshold = thr;
-        }
-
-        public int GetThreshold()
-        {
-            return _threshold;
         }
 
         public int GetCurTemp()
