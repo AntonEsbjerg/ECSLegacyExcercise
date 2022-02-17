@@ -12,7 +12,7 @@ namespace ECSTestProject
         public void Setup()
         {
             testRandom = new FakeSystemRandom();
-            uut = new TempSensor(testRandom);
+            uut = new TempSensor();
         }
 
         [TestCase(-1,-1)]
