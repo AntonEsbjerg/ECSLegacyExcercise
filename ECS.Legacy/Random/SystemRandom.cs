@@ -8,16 +8,6 @@ namespace ECS.Legacy
         private static int _customRandom;
         private static Random _random;
 
-        public void Set(int custom)
-        {
-            _customRandom = custom;
-        }
-
-        public void Reset()
-        {
-            _customRandom = 0;
-        }
-
         public int Get()
         {
             _random = new Random();

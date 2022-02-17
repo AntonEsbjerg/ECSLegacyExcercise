@@ -6,9 +6,6 @@ namespace ECS.Legacy
     {
         private static int _customRandom;
         private static Random _random;
-
-        public void Set(int custom);
-        public void Reset();
         public int Get();
         public int Get(int seed);
 
