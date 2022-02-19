@@ -20,32 +20,25 @@ namespace ECSTestProject
 
 
 
-        [TestCase()]
-        [TestCase()]
-        [TestCase()]
-        [Test]
-        public void testone()
+        [TestCase("teststring with numbers 10969023")]
+        [TestCase("tEsTStrInG With CaPitaL LetTerS")]
+        [TestCase("teststring with signs: !#¤%&/()=?`^*")]
+        public void testone(string seed)
         {
+            string WrittenString =
+                uut.Write();
 
-        }
-
-
-        [Test]
-        public void testtwo()
-        {
-
+            Assert.Equals(WrittenString, seed);
         }
 
         [Test]
-        public void testtree()
+        public void teston()
         {
+            string WrittenString = 
+            uut.Write();
 
+            Assert.Equals(WrittenString, "I don't know why i made this method.");
         }
-
-
-
-
-
 
 
 

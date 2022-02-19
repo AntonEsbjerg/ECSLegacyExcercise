@@ -6,14 +6,18 @@ namespace ECS.Legacy.Writer
 {
     class FakeWriter : IWriter
     {
-        public void Write()
+        public string Write()
         {
-            Console.Write("fake writer writes.");
+            string text = "fake writer writes.";
+            Console.Write(text);
+            return text;
         }
 
-        public void Write(string seed)
+        public string Write(string seed)
         {
-            Console.Write("fake writer writes with seed.");
+            string text = "fake writer writes with seed.";
+            Console.Write(text);
+            return text;
         }
 
         public bool RunSelfTest()

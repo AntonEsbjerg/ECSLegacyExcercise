@@ -6,9 +6,9 @@ namespace ECS.Legacy.Writer
 {
     public interface IWriter
     {
-        public void Write();
+        public string Write();
 
-        public void Write(string seed);
+        public string Write(string seed);
 
         public bool RunSelfTest(); 
 

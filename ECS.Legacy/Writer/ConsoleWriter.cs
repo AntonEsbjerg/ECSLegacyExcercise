@@ -6,14 +6,18 @@ namespace ECS.Legacy.Writer
 {
     public class ConsoleWriter : IWriter
     {
-        public void Write()
+        public string Write()
         {
-            Console.Write("I don't know why i made this method.");
+            string text = "I don't know why i made this method.";
+            Console.Write(text);
+            return text;
         }
 
-        public void Write(string seed)
+        public string Write(string seed)
         {
-            Console.Write(seed);
+            string text = seed;
+            Console.Write(text);
+            return text;
         }
 
         public bool RunSelfTest()
