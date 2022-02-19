@@ -1,4 +1,5 @@
 ﻿using System;
+using ECS.Legacy.Writer;
 
 namespace ECS.Legacy
 {
@@ -6,14 +7,18 @@ namespace ECS.Legacy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Testing ECS.Legacy");
+            ConsoleWriter writer = new ConsoleWriter();
+
+            writer.Write("Testing ECS.Legacy");
 
             // Make an ECS with a threshold of 23
             var control = new ECSClass(23);
 
             for (int i = 1; i <= 15; i++)
             {
-                Console.WriteLine($"Running regulation number {i}");
+
+
+                writer.Write($"Running regulation number {i}");
 
                 control.Regulate();
             }

@@ -6,11 +6,11 @@ namespace ECS.Legacy.Writer
 {
     public interface IWriter
     {
-        public string Write();
+        public void Write();
 
-        public string Write(string seed);
+        public void Write(string seed);
 
-
+        public bool RunSelfTest(); 
 
     }
 }

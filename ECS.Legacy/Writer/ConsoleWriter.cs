@@ -4,16 +4,16 @@ using System.Text;
 
 namespace ECS.Legacy.Writer
 {
-    class ConsoleWriter
+    class ConsoleWriter : IWriter
     {
-        public string Write()
+        public void Write()
         {
-            return "fake";
+            Console.Write("I don't know why i made this method.");
         }
 
-        public string Write(string seed)
+        public void Write(string seed)
         {
-            return seed;
+            Console.Write(seed);
         }
 
         public bool RunSelfTest()
