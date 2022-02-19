@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ECS.Legacy.Writer
 {
-    class ConsoleWriter : IWriter
+    public class ConsoleWriter : IWriter
     {
         public void Write()
         {
